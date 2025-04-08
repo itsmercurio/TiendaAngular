@@ -1,0 +1,21 @@
+<div class="container mt-5">
+    <div class="row">
+      <div class="col-md-8">
+        <h2>Acerca de Nosotros</h2>
+      <p>
+        Somos una tienda de ropa con más de 10 años de experiencia en el mercado. Nos dedicamos a ofrecer productos de alta calidad con el mejor servicio al cliente.
+      </p>
+      <p>
+        Nuestro equipo está comprometido con brindar la mejor experiencia de compra y satisfacer todas tus necesidades de moda. ¡Bienvenido a la mejor tienda online de ropa!
+      </p>
+      <h3>Nuestra Historia</h3>
+      <p>
+        Fundada en 2011, nuestra tienda comenzó como un pequeño emprendimiento con el objetivo de ofrecer ropa innovadora, accesible y de calidad para todos. A lo largo de los años, hemos crecido y evolucionado para ser una de las principales tiendas de ropa en línea.
+      </p>
+    </div>
+  
+      <div class="col-md-4" *ngIf="image">
+        <img [src]="image.url" class="img-fluid rounded" alt="Imagen {{image.id}}">
+      </div>
+    </div>
+  </div>
