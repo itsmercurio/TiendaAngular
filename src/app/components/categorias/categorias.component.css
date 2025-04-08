@@ -1,0 +1,11 @@
+.card {
+    max-width: 250px; /* Tamaño máximo de cada tarjeta */
+    margin: auto;
+  }
+  
+  .card-img-top {
+    max-height: 150px; /* Limita la altura de las imágenes */
+    object-fit: cover; /* Mantiene la proporción de las imágenes */
+  }
+  
+  

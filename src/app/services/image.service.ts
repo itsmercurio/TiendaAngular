@@ -9,6 +9,7 @@ export class ImageService {
 
   private apiUrl:string = 'http://localhost:3000/images';
   private bannerUrl:string = 'http://localhost:3000/images/banners'
+  private categoryUrl:string = 'http://localhost:3000/images/categorias'
 
   constructor(private http: HttpClient) {
    }
@@ -19,6 +20,9 @@ export class ImageService {
 
   getBannerImages(): Observable<any> {
     return this.http.get<any>(this.bannerUrl);
+  }
+  getCategoryImages(): Observable<any> {
+    return this.http.get<any>(this.categoryUrl);
   }
 
    getImageById(id: number): Observable<any> {

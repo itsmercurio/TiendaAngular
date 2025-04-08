@@ -1,0 +1,11 @@
+.custom-img-large {
+    max-width: 300px; /* Imagen grande, ajustada */
+    width: 100%; /* Ocupa el 100% del contenedor disponible */
+    height: auto; /* Mantiene la proporción de la imagen */
+  }
+  
+  .custom-img-small {
+    max-width: 80px; /* Tamaño de la imagen pequeña */
+    height: auto; /* Mantiene la proporción de la imagen */
+  }
+  

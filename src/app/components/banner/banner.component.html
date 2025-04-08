@@ -1,1 +1,14 @@
-<p>banner works!</p>
+<div class="container mt-5">
+    <div class="row">
+      <div *ngFor="let image of images" class="col-md-4 mb-4">
+        <div class="card">
+          <img [src]="image.url" class="card-img-top" alt="Banner {{image.id}}">
+          <div class="card-body">
+            <h5 class="card-title"></h5>
+            <p class="card-text"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

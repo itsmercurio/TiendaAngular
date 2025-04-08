@@ -17,7 +17,6 @@ export class CarouselComponent implements OnInit{
       
     this.imageService.getImages().subscribe(
       (data)=>{this.images=data.images || data;
-    console.log(this.images);
       },
       (error)=>{console.error(error);}
     );

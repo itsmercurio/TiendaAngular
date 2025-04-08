@@ -1,12 +1,25 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ImageService } from '../../services/image.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-banner',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './banner.component.html',
   styleUrl: './banner.component.css'
 })
-export class BannerComponent {
+export class BannerComponent implements OnInit{
+  images: any[] = []
 
+  constructor(private imageService: ImageService){
+
+  }
+
+  ngOnInit(): void {
+      this.imageService.getBannerImages().subscribe(
+        (data)=>{this.images = data.images || data;},
+        (error)=>{console.error(error);}
+      );
+    }
 }

@@ -20,7 +20,6 @@ export class NosotrosComponent implements OnInit {
     const id = 1;
     this.imageService.getImageById(id).subscribe(
       (data) => { this.image = data;
-        console.log(data);
        },
       (error) => {console.error(error); }
       );
