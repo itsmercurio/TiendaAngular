@@ -1,6 +1,12 @@
+
 .uniform-image {
     width: 100%;
     height: 400px;
     object-fit: cover; 
   }
+  #carouselExample + .container {
+    margin-top: -10px; /* Reduce el espacio entre el carrusel y el contenedor abajo */
+  }
+  
+
   

@@ -1,0 +1,15 @@
+/* Aseguramos que el contenedor de la navbar sea flexible */
+.navbar .container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  /* Centrar el título Mi Tienda */
+  .navbar-brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  

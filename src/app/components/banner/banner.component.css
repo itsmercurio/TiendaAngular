@@ -1,0 +1,16 @@
+.row {
+    margin-top: 10px; /* Ajusta el margen superior */
+  }
+  
+  
+.card{
+    border-radius: 0;
+    height: 80%;
+}
+.card-img-top {
+    border-radius: 0;
+    width: 100%; /* Estira la imagen horizontalmente para que ocupe el ancho completo */
+    height: 250px; /* Ajusta la altura a 200px (puedes cambiar este valor según lo necesites) */
+    object-fit: cover; /* Mantiene la relación de aspecto de la imagen, recortando si es necesario */
+  }
+  

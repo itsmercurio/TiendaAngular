@@ -1,9 +1,13 @@
-/* Imagen pequeña para las tarjetas */
-.custom-img-small {
-    max-width: 100%;
-    height: 380px;
-    object-fit: cover;
-    margin-bottom: 15px; 
-  }
-  
-  
+.custom-img {
+  height: 400px; /* o ajusta según tu diseño */
+  object-fit: cover;
+  border-radius: 0px;
+}
+
+.icon-heart {
+  font-size: 1.2rem;
+  background-color: white;
+  border-radius: 50%;
+  padding: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}

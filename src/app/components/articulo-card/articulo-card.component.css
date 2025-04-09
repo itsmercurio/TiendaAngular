@@ -4,9 +4,13 @@
     height: auto; /* Mantiene la proporción de la imagen */
   }
   
+  .button{
+    border-radius: 0;
+  }
   .custom-img-small {
     max-width: 80px; /* Tamaño de la imagen pequeña */
     height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 0;
   }
   .talla-container {
     display: flex;

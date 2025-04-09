@@ -1,11 +1,71 @@
+
 .card {
     max-width: 250px; /* Tamaño máximo de cada tarjeta */
     margin: auto;
+    border-radius: 0;
   }
   
   .card-img-top {
-    max-height: 150px; /* Limita la altura de las imágenes */
+    max-height: 200px; /* Limita la altura de las imágenes */
     object-fit: cover; /* Mantiene la proporción de las imágenes */
+    border-radius: 0;
+    
   }
+/* Título de las categorías */
+h2.text-center {
+  font-family: 'Arial', sans-serif; /* O cualquier fuente que te guste */
+  font-weight: bold;
+  font-size: 2.5rem;  /* Puedes ajustar el tamaño de la fuente */
+  text-transform: uppercase; /* Convertir el texto a mayúsculas */
+  color: #333; /* Color oscuro para el título */
+}
+
+/* Estilo personalizado para el título de las categorías en cada tarjeta */
+.custom-category-title {
+  font-family: 'Roboto', sans-serif; /* Fuente más moderna */
+  font-weight: 700; /* Negrita */
+  font-size: 1.2rem; /* Tamaño de fuente para que sea prominente */
+  color: #2c3e50; /* Un color oscuro y elegante */
+  text-transform: capitalize; /* Para que la primera letra de cada palabra esté en mayúscula */
+}
+
+/* Estilo para la descripción de la categoría */
+.custom-category-description {
+  font-family: 'Arial', sans-serif;
+  color: #7f8c8d; /* Color gris suave para la descripción */
+  font-size: 0.875rem; /* Tamaño de fuente pequeño */
+  line-height: 1.4; /* Para mejorar la legibilidad */
+}
+
+/* Estilos para la tarjeta */
+.custom-card {
+  border: none;
+  border-radius: 0px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil para la tarjeta */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación suave al pasar el mouse */
+}
+
+.custom-card:hover {
+  transform: scale(1.05); /* Ampliar ligeramente al pasar el mouse */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Sombra más intensa al hacer hover */
+}
+
+/* Estilo para las imágenes dentro de las tarjetas */
+.card-img-top {
+  border-radius: 0;
+}
+/* Eliminar el subrayado de los enlaces */
+a {
+  text-decoration: none; /* Quitar subrayado */
+  color: inherit; /* Mantener el color del texto del contenedor (por defecto negro) */
+}
+
+/* Estilos opcionales para cambiar el color cuando se pasa el mouse */
+a:hover {
+  text-decoration: none; /* Asegurarse de que no tenga subrayado al hacer hover */
+  color: inherit; /* Mantener el color original al pasar el mouse */
+}
+
+  
   
   
