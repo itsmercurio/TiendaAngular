@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
+import { Articulo, ArticulosResponse } from '../models/articulo.model';
 
 @Injectable({
   providedIn: 'root'
@@ -12,11 +13,11 @@ export class ArticulosService {
 
   constructor(private http:HttpClient) { }
 
-  getAll(): Observable<any>{
-    return this.http.get(this.apiUrl);
+  getAll(): Observable<Articulo[]>{
+    return this.http.get<ArticulosResponse>(this.apiUrl).pipe(map(response => response.articulos));
   }
 
-  getArticuloPorId(id: string): Observable<any> {
-    return this.http.get<any>(`${this.apiUrl}/${id}`);
+  getArticuloPorId(id: string): Observable<Articulo> {
+    return this.http.get<Articulo>(`${this.apiUrl}/${id}`);
   }
 }

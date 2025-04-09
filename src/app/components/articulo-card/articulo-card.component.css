@@ -8,4 +8,43 @@
     max-width: 80px; /* Tamaño de la imagen pequeña */
     height: auto; /* Mantiene la proporción de la imagen */
   }
+  .talla-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, opacity 0.3s ease, border-color 0.3s ease;
+  }
+  
+  /* Tallas disponibles (con fondo gris claro, texto negro y borde negro) */
+  .talla-container.bg-light {
+    background-color: #f0f0f0; /* Gris claro */
+    color: #333; /* Negro */
+    border: 2px solid #333; /* Borde negro */
+  }
+  
+  /* Tallas no disponibles (con fondo gris oscuro, texto gris claro y borde gris) */
+  .talla-container.bg-secondary {
+    background-color: #d6d6d6; /* Gris oscuro */
+    color: #8c8c8c; /* Gris claro */
+    border: 2px solid #ccc; /* Borde gris */
+    text-decoration: line-through; /* Tachado */
+    opacity: 0.5; /* Más opaco */
+    cursor: not-allowed; /* Cursor deshabilitado */
+  }
+  
+  /* Opcional: Si quieres cambiar el color cuando se pasa el mouse sobre una talla disponible */
+  .talla-container:hover {
+    background-color: #e0e0e0; /* Un tono más oscuro de gris */
+  }
+  
+  /* Estilo para el contenedor de las tallas */
+  .talla-container span {
+    display: inline-block;
+    line-height: 40px;
+  }
   

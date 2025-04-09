@@ -2,18 +2,19 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ArticulosService } from '../../services/articulos.service';
 import { CommonModule } from '@angular/common';
+import { Articulo } from '../../models/articulo.model';
 
 @Component({
   selector: 'app-articulo-card',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './articulo-card.component.html',
-  styleUrl: './articulo-card.component.css'
+  styleUrls: ['./articulo-card.component.css']
 })
-export class ArticuloCardComponent implements OnInit{
+export class ArticuloCardComponent implements OnInit {
 
   articuloId: string = '';
-  articuloDetalle: any = {};
+  articuloDetalle: Articulo | null = null;
 
   constructor(
     private route: ActivatedRoute,
@@ -22,8 +23,9 @@ export class ArticuloCardComponent implements OnInit{
 
   ngOnInit(): void {
     this.articuloId = this.route.snapshot.paramMap.get('id') || '';
+    
     this.articulosService.getArticuloPorId(this.articuloId).subscribe(
-      (data) => {
+      (data: Articulo) => {
         this.articuloDetalle = data;
         console.log(data);
       },

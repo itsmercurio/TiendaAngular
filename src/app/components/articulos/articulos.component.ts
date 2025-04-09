@@ -2,19 +2,20 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { ArticulosService } from '../../services/articulos.service';
+import { Articulo } from '../../models/articulo.model';
 
 @Component({
   selector: 'app-articulos',
   standalone: true,
   imports: [CommonModule, RouterModule],
   templateUrl: './articulos.component.html',
-  styleUrl: './articulos.component.css'
+  styleUrls: ['./articulos.component.css']
 })
 export class ArticulosComponent implements OnInit {
 
   categoria: string = '';  
   articuloId: string = '';
-  articulos: any[] = [];
+  articulos: Articulo[] = [];
 
   constructor(
     private route: ActivatedRoute,
@@ -32,7 +33,7 @@ export class ArticulosComponent implements OnInit {
 
       this.articulosService.getAll().subscribe(
         (data) => {
-          this.articulos = data.articulos;
+          this.articulos = data; 
           console.log('Todos los artículos:', this.articulos);
         },
         (error) => {
