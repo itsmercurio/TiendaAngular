@@ -1,28 +1,9 @@
-<div class="container mt-5">
+<div class="container mt-5"> 
   <h2 class="text-center mb-4">Todos los Artículos</h2>
 
   <div class="row">
     <div class="col-md-4 mb-4" *ngFor="let articulo of articulos">
-      <div class="position-relative text-center">
-
-        <!-- Imagen con corazón -->
-        <a [routerLink]="[articulo.id]" class="d-block position-relative">
-          <img [src]="articulo.imagen" class="w-100 custom-img object-fit-cover" alt="{{ articulo.nombre }}">
-          <i class="fa-solid fa-heart position-absolute top-0 end-0 m-2 text-danger icon-heart"></i>
-        </a>
-
-        <!-- Título y precio -->
-        <h5 class="fw-bold mt-2">{{ articulo.nombre }}</h5>
-        <p>
-          <span *ngIf="articulo.precioOferta" class="text-decoration-line-through me-1">
-            {{ articulo.precio | currency: 'EUR': 'symbol' }}
-          </span>
-          <span [ngClass]="{'text-danger': articulo.precioOferta}" class="fw-bold">
-            {{ articulo.precioOferta ? (articulo.precioOferta | currency: 'EUR': 'symbol') : (articulo.precio | currency: 'EUR': 'symbol') }}
-          </span>
-        </p>
-
-      </div>
+      <app-subcomponent-card [articulo]="articulo"></app-subcomponent-card> 
     </div>
   </div>
 </div>

@@ -3,11 +3,12 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { ArticulosService } from '../../services/articulos.service';
 import { Articulo } from '../../models/articulo.model';
+import { SubcomponentCardComponent } from '../subcomponent-card/subcomponent-card.component';
 
 @Component({
   selector: 'app-articulos',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, SubcomponentCardComponent],
   templateUrl: './articulos.component.html',
   styleUrls: ['./articulos.component.css']
 })

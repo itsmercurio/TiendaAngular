@@ -1,0 +1,16 @@
+<div class="position-relative text-center">
+  <a [routerLink]="['/articulo', articulo.categoria, articulo.id]" class="d-block position-relative">
+    <img [src]="articulo.imagen" class="w-100 custom-img object-fit-cover" alt="{{ articulo.nombre }}">
+    <i class="fa-solid fa-heart position-absolute top-0 end-0 m-2 text-danger icon-heart"></i>
+  </a>
+
+  <h5 class="fw-bold mt-2">{{ articulo.nombre }}</h5>
+  <p>
+    <span *ngIf="articulo.precioOferta" class="text-decoration-line-through me-1">
+      {{ articulo.precio | currency: 'EUR': 'symbol' }}
+    </span>
+    <span [ngClass]="{'text-danger': articulo.precioOferta}" class="fw-bold">
+      {{ articulo.precioOferta ? (articulo.precioOferta | currency: 'EUR': 'symbol') : (articulo.precio | currency: 'EUR': 'symbol') }}
+    </span>
+  </p>
+</div>

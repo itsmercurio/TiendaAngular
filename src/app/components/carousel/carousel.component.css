@@ -5,7 +5,7 @@
     object-fit: cover; 
   }
   #carouselExample + .container {
-    margin-top: -10px; /* Reduce el espacio entre el carrusel y el contenedor abajo */
+    margin-top: -10px;
   }
   
 

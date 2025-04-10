@@ -1,19 +1,14 @@
 <div class="d-flex justify-content-center align-items-center min-vh-100">
   <div class="articulo-detalle d-flex flex-wrap p-4">
-    <!-- Imagen principal -->
     <img *ngIf="articuloDetalle?.imagen"
          [src]="articuloDetalle?.imagen"
          alt="Imagen del artículo"
          class="img-fluid custom-img-large me-4" />
 
-    <!-- Contenido a la derecha -->
     <div class="info-articulo text-start">
-      <!-- Título y categoría -->
       <p class="text-muted">{{ articuloDetalle?.categoria }}</p>
       <h2 class="fw-bold">{{ articuloDetalle?.nombre }}</h2>
-      
 
-      <!-- Precio -->
       <p *ngIf="!articuloDetalle?.precioOferta">
         Precio: <strong>{{ articuloDetalle?.precio | currency: 'EUR': 'symbol' }}</strong>
       </p>
@@ -26,7 +21,6 @@
         </strong>
       </p>
 
-      <!-- Imagen miniatura -->
       <div class="my-3">
         <img *ngIf="articuloDetalle?.imagen"
              [src]="articuloDetalle?.imagen"
@@ -34,7 +28,6 @@
              class="img-thumbnail custom-img-small" />
       </div>
 
-      <!-- Tallas -->
       <div class="mt-4">
         <h5>Tallas disponibles:</h5>
         <div class="d-flex flex-wrap">
@@ -50,7 +43,6 @@
         </div>
       </div>
 
-      <!-- Botones -->
       <div class="d-flex gap-3 mt-4">
         <button class="btn btn-dark d-flex align-items-center button">
           <i class="fa fa-envelope me-2"></i> Waitlist

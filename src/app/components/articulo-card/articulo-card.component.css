@@ -1,15 +1,15 @@
 .custom-img-large {
-    max-width: 300px; /* Imagen grande, ajustada */
-    width: 100%; /* Ocupa el 100% del contenedor disponible */
-    height: auto; /* Mantiene la proporción de la imagen */
+    max-width: 300px;
+    width: 100%;
+    height: auto;
   }
   
   .button{
     border-radius: 0;
   }
   .custom-img-small {
-    max-width: 80px; /* Tamaño de la imagen pequeña */
-    height: auto; /* Mantiene la proporción de la imagen */
+    max-width: 80px;
+    height: auto;
     border-radius: 0;
   }
   .talla-container {
@@ -24,31 +24,39 @@
     transition: background-color 0.3s ease, opacity 0.3s ease, border-color 0.3s ease;
   }
   
-  /* Tallas disponibles (con fondo gris claro, texto negro y borde negro) */
+  
   .talla-container.bg-light {
-    background-color: #f0f0f0; /* Gris claro */
-    color: #333; /* Negro */
-    border: 2px solid #333; /* Borde negro */
+    background-color: #f0f0f0;
+    color: #333;
+    border: 2px solid #333;
   }
   
-  /* Tallas no disponibles (con fondo gris oscuro, texto gris claro y borde gris) */
+
   .talla-container.bg-secondary {
-    background-color: #d6d6d6; /* Gris oscuro */
-    color: #8c8c8c; /* Gris claro */
-    border: 2px solid #ccc; /* Borde gris */
-    text-decoration: line-through; /* Tachado */
-    opacity: 0.5; /* Más opaco */
-    cursor: not-allowed; /* Cursor deshabilitado */
+    background-color: #d6d6d6;
+    color: #8c8c8c;
+    border: 2px solid #ccc;
+    text-decoration: line-through;
+    opacity: 0.5;
+    cursor: not-allowed;
   }
   
-  /* Opcional: Si quieres cambiar el color cuando se pasa el mouse sobre una talla disponible */
+  
   .talla-container:hover {
-    background-color: #e0e0e0; /* Un tono más oscuro de gris */
+    background-color: #e0e0e0;
   }
   
-  /* Estilo para el contenedor de las tallas */
+
   .talla-container span {
     display: inline-block;
     line-height: 40px;
   }
+
+.custom-img-large {
+  max-width: 40%;
+  height: auto;
+}
+
+
+  
   
